@@ -1,0 +1,455 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+body{
+    background-color: rgb(23 23 23);
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Helvetica';
+    
+    
+}
+
+h1,h2,h3,p{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    
+}
+
+.page{
+    margin: auto;
+    width: 1210px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* HEADER SECTION */
+
+header{
+    height: 80px;
+    width: 1210px;
+    padding: 0 5px 0 5px ;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgb(23 23 23);
+    z-index: 99;
+}
+
+.header::after{
+    content: "";
+    width: 1201px;
+    height: 1px;
+    position: absolute;
+    transition: all 0.3s ease;
+    left: 5px;
+    bottom: 0;
+}
+
+.header.scrolled::after
+{
+    background-color: white;
+}
+.headerCol1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.04rem;
+    
+}
+.headerCol1 h1{
+    /* font-size: 1rem; */
+    font-weight: 400;
+    cursor:default
+}
+.headerCol1 h1:nth-child(2){
+    color: rgb(173, 173, 173);
+    font-size: 0.95rem;
+}
+
+.directoryHolder{
+    font-size: 1.2rem;
+}
+
+.headerCol2{
+    display: flex;
+    justify-content: center;
+}
+
+.navHolder{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.navItem{
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.navItem:hover{
+    color: rgb(160, 160, 160);
+}
+
+/* HERO SECTION */
+
+.hero{
+    margin: 60px 0 0 0;
+    height: 400px;
+    width: 1200px;
+}
+.hero h1{
+    margin: 80px 0 0 0;
+    font-size: 3.168rem;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.hero h2{
+    font-size: 1.618rem;
+}
+
+p{
+    font-size: 1rem;
+    width: 500px;
+    margin-top: 20px;
+    line-height: 1.4rem;
+    letter-spacing: 0.02rem;
+    color: rgb(173, 173, 173);
+}
+
+.links{
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    width: 200px;
+    height: 30px;
+    gap: 8px;
+}
+
+.links i{
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    color: white;
+}
+.links i:hover{
+    color: rgb(160, 160, 160);
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.links li:nth-child(1){
+    padding-left: 1px;
+}
+
+
+
+/* PROJECT SECTION */
+
+.ProjectSection{
+    width: 1200px;
+    height: 520px;
+}
+.ProjectSection h1{
+    font-size: 3.168rem;
+    
+    margin-bottom: 25px;
+}
+.ProjectSection span{
+    font-size: 1.168rem;
+    color: rgb(160, 160, 160);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    bottom: 5px;
+}
+
+.ProjectSection span:hover{
+    margin-left: 5px;
+}
+.ProjectSection span::after{
+    content: "→";
+    position: absolute;
+    top: 0;
+    right: 0;
+   
+    columns: white;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.ProjectSection span:hover::after{
+   right: -25px;
+   opacity: 1;
+}
+
+.projectNo{
+    margin: 10px 0 5px 0;
+    font-size: 0.8rem;
+    color: rgb(160, 160, 160);
+   
+}
+
+
+.projectYear{
+    font-size: 0.8rem;
+    color: rgb(160, 160, 160);
+}
+
+.projectTitle{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.projectDescription{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5px 0 5px 0;
+    color: rgb(160, 160, 160);
+    line-height: 1.4rem;
+    max-width: 800px;
+    
+}
+
+.projectHolder{
+    background-color: rgb(23 23 23);
+    border-radius: 5px;
+    padding-top: 1px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.projectHolder:hover{
+    background-color: rgb(37, 37, 37);
+    cursor: pointer;
+    opacity: 1 ;
+}
+
+.projectWrapper:hover .projectHolder:not(:hover){
+    opacity: 0.5;
+}
+
+
+/* ExperienceSection */
+
+.experienceSection{
+    width: 1200px;
+    min-height: 300px;    
+}
+
+.experienceSection h1{
+    font-size: 3.168rem;
+    margin-bottom: 35px;
+}
+
+.jobTitle{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 2px;
+    position: relative;
+}
+.jobTitle span{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: rgb(160, 160, 160);
+}
+.jobTitle:nth-child(2){
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.jobYear{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    font-size: 1rem;
+    color: rgb(160, 160, 160);
+}
+
+.jobAchivement{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+    color: rgb(160, 160, 160);
+    line-height: 1.4rem;
+}
+
+.jobAchivement ul{
+    /* list-style: none; */
+    padding-left: 20px;   
+}
+
+.lispace{
+    height: 5px;
+}
+
+.experienceHolder hr{
+    height: 1px;
+    /* border: 1px solid rgb(160, 160, 160); */
+    border: 1px solid rgb(160, 160, 160);
+}
+
+
+
+
+/* EDUCATION SECTION */
+
+.educationSection{
+    width: 1200px;
+    min-height: 380px;    
+}
+
+.educationSection h1{
+    font-size: 3.168rem;
+    margin-bottom: 35px;
+}
+
+.educationHolder{
+    margin-bottom: 40px;
+}
+
+.eduTitle{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+.eduTitle span{
+    margin-top: 5px;
+    font-size: 1rem;
+    color: rgb(160, 160, 160);
+}
+
+.eduCollege{
+    font-size: 0.98rem;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.eduDegree{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 8px 0 5px 0;
+    color: rgb(160, 160, 160);
+    line-height: 1.4rem;
+}
+
+
+/* About */
+
+.aboutSection{
+    width: 1200px;
+    min-height: 400px; 
+}
+
+.aboutSection h1{
+    font-size: 3.168rem;
+    margin-bottom: 35px;
+}
+
+.aboutHolder h3{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    max-width: 800px;
+    letter-spacing: 0.02rem;
+    line-height: 1.4rem;
+    color: rgb(160, 160, 160);
+}
+
+.aboutHolder h3{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    max-width: 800px;
+    letter-spacing: 0.02rem;
+    line-height: 1.4rem;
+    color: rgb(160, 160, 160);
+}
+
+.objectIni{
+    margin: 0;
+}
+.objectIni .tab{
+    visibility: hidden;
+}
+
+.aboutHolder h2{
+    font-size: 1rem;
+    margin-bottom: 2px;
+    letter-spacing: 0.02rem;
+    line-height: 1.4rem;
+    /* color: rgb(160, 160, 160); */
+}
+
+.objectCode{
+    margin-bottom: 40px;
+}
+
+.darkBlue{
+    color: #2150b2 ;
+}
+.blue{
+    color: #2ca3ff ;
+}
+
+.yellow{
+    color: #fed700 ;
+}
+
+.lightBlue{
+    color: #7cddf0;    
+}
+
+.orange{
+    color: #ce915b;
+}
+
+.green{
+    color: #b5cda9;
+}
+
+.violet{
+    color: #ce70b4;    
+}
+
+.lightYellow{
+    color:#dcdcaa
+}
+
+.emptySpace{
+    height: 500px;
+}
+
+
+@media(max-width: 500px){
+
+
+
+
+
+
+
+}
