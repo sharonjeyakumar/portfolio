@@ -560,7 +560,7 @@ p{
 
     .ProjectSection{
         width: var(--width);
-        height: 520px;
+        height: 540px;
     }
     .ProjectSection h1{
         font-size: 2.168rem;
@@ -687,7 +687,7 @@ p{
     /* EDUCATION SECTION */
 
 .educationSection{
-    min-height: 350px;    
+    min-height: 330px;    
 }
 
 .educationSection h1{
@@ -697,7 +697,7 @@ p{
 }
 
 .educationHolder{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .eduTitle{
@@ -744,7 +744,7 @@ p{
 
 .aboutSection h1{
     font-size: 2.168rem;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .aboutHolder h3{
@@ -755,14 +755,6 @@ p{
     line-height: 1.2rem;
 }
 
-.aboutHolder h3{
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-    max-width: 800px;
-    letter-spacing: 0.02rem;
-    line-height: 1.4rem;
-    color: rgb(160, 160, 160);
-}
 
 .objectIni{
     margin: 0;
@@ -775,8 +767,7 @@ p{
     font-size: 0.8rem;
     margin-bottom: 2px;
     letter-spacing: 0.02rem;
-    line-height: 1.4rem;
-    /* color: rgb(160, 160, 160); */
+    line-height: 1.2rem;
 }
 
 .objectCode{

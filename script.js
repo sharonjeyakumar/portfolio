@@ -59,7 +59,7 @@ projectNav.addEventListener('click', ()=>{
 //     window.scrollTo(0,820)
 // })
 aboutNav.addEventListener('click', ()=>{
-    window.scrollTo(0,1500)
+    window.scrollTo(0,1510)
 })
 
 //Nav Bar
