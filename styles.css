@@ -12,20 +12,6 @@ body{
     font-family: 'Helvetica';
     -webkit-text-size-adjust: none;
 }
-* {
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  ::selection {
-    background-color: transparent; 
-    color: inherit;
-  }
-  
-  /* For WebKit-based browsers (Chrome, Safari, iOS) */
-  ::-webkit-selection {
-    background-color: transparent;
-    color: inherit;
-  }
   
 :root {
     --headerwidth: 1210px;
@@ -501,6 +487,21 @@ p{
 
 
 @media(max-width:480px){
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+      }
+    
+      ::selection {
+        background-color: transparent; 
+        color: inherit;
+      }
+      
+      /* For WebKit-based browsers (Chrome, Safari, iOS) */
+      ::-webkit-selection {
+        background-color: transparent;
+        color: inherit;
+      }
 
     :root {
         --headerwidth: 360px;
