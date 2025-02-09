@@ -10,6 +10,7 @@ body{
     padding: 0;
     font-size: 16px;
     font-family: 'Helvetica';
+    -webkit-text-size-adjust: none;
 }
 * {
     -webkit-tap-highlight-color: transparent;
@@ -434,6 +435,9 @@ p{
 .objectCode{
     margin-bottom: 40px;
 }
+.objectIni:nth-child(1){
+    margin-top: 25px;
+}
 
 .darkBlue{
     color: #2150b2 ;
@@ -471,17 +475,12 @@ p{
 }
 
 
-@media(max-width: 1920px){
-
+/* @media(max-width: 1920px){
     :root {
         --headerwidth: 1010px;
         --headerLineWidth: 1001px;
         --width: 1000px;
     }
-
-    
-
-    
 }
 @media(max-width: 1280px){
 
@@ -498,17 +497,11 @@ p{
         --headerLineWidth: 701px;
         --width: 700px;
     }
-}
-@media(max-width: 800px){
+} */
 
-    :root {
-        --headerwidth: 610px;
-        --headerLineWidth: 601px;
-        --width: 600px;
-    }
-}
-@media(max-width: 768px){
-    
+
+@media(max-width:480px){
+
     :root {
         --headerwidth: 360px;
         --headerLineWidth: 351px;
@@ -646,6 +639,7 @@ p{
     .jobTitle span{
         margin-top: 5px;
         font-size: 0.8rem;
+       
     }
     .jobTitle:nth-child(2){
         font-size: 0.8rem;
@@ -659,13 +653,19 @@ p{
         margin-top: 5px;
         font-size: 0.7rem;
         color: rgb(160, 160, 160);
+        
     }
     
     .jobAchivement{
-        font-size: 0.8rem;
+        /* font-size: 0.8rem;
         max-width: 340px;
         margin: 0 0 5px 0;
+        line-height: 1.2rem; */
+
+        font-size: 0.8rem;
+        margin: 5px 0 5px 5px;
         line-height: 1.2rem;
+        width: 320px;
     }
     .jobAchivement li{
         margin: 0 0 5px 0;
@@ -693,7 +693,6 @@ p{
 .educationSection h1{
     font-size: 2.168rem;
     margin-bottom: 35px;
-    text-indent: 0 !important;
 }
 
 .educationHolder{
@@ -710,7 +709,7 @@ p{
 .eduTitle span{
     margin-top: 5px;
     font-size: 0.7rem;
-
+    padding: 0;
 }
 
 .eduCollege{
@@ -773,6 +772,9 @@ p{
 .objectCode{
     margin-bottom: 40px;
 }
+
+
+
 
 }
 
