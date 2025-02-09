@@ -475,7 +475,7 @@ p{
 }
 
 
-/* @media(max-width: 1920px){
+@media(max-width: 1920px){
     :root {
         --headerwidth: 1010px;
         --headerLineWidth: 1001px;
@@ -497,7 +497,7 @@ p{
         --headerLineWidth: 701px;
         --width: 700px;
     }
-} */
+}
 
 
 @media(max-width:480px){
