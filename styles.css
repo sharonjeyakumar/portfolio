@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
 }
 body{
     background-color: rgb(23 23 23);
@@ -9,7 +9,9 @@ body{
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: 'Helvetica';
+    /* font-family: 'Helvetica'; */
+    font-family: "Roboto", sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     -webkit-text-size-adjust: none;
 }
   
@@ -64,7 +66,7 @@ header{
 
 .header.scrolled::after
 {
-    background-color: white;
+    background-color:  rgb(97, 97, 97);
 }
 .headerCol1{
     display: flex;
@@ -377,13 +379,15 @@ p{
 
 .aboutSection{
     width: var(--width);
-    min-height: 400px; 
+    min-height: 350px; 
 }
 
 .aboutSection h1{
     font-size: 3.168rem;
     margin-bottom: 35px;
 }
+
+
 
 .aboutHolder h3{
     font-size: 1rem;
@@ -456,8 +460,77 @@ p{
     color:#dcdcaa
 }
 
+.emailSection{
+    height: 770px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+.emailSection h2{
+   margin-left: 4px;
+}
+
+
+.input{
+    height: 50px;
+    width: 500px;
+    margin-left: 5px;
+    background-color: rgb(23 23 23);
+    border: 1px solid rgb(97, 97, 97);
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 5px;
+}
+
+.emailTextArea{
+    width: 500px;
+    height: 350px;
+    resize: none;
+    margin-left: 5px;
+    background-color: rgb(23 23 23);
+    border: 1px solid rgb(97, 97, 97);
+    color: white;
+    padding-left: 5px;
+    font-size: 1rem;
+    letter-spacing: none;
+}
+
+.submitBtn{
+    height: 50px;
+    width: 500px;
+    margin-left: 5px;
+    background-color: rgb(37, 37, 37);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+.submitBtn:hover{
+    background-color: rgb(32, 32, 32);
+   
+}
 .emptySpace{
-    height: 500px;
+    height: 0px;
+}
+
+.profileImage{
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    background-image: url(assets/profile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    background-repeat: none;
+    background-position: 45% 0%;
+    background-size: 110%;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 
@@ -475,6 +548,8 @@ p{
         --headerLineWidth: 801px;
         --width: 800px;
     }
+
+    
 }
 @media(max-width: 1024px){
 
@@ -483,10 +558,48 @@ p{
         --headerLineWidth: 701px;
         --width: 700px;
     }
+    .projectDescription{
+        max-width: 650px;
+        
+    }
+
+    .aboutSection{
+        min-height: 380px;
+    }
+
+    
+}
+@media(max-width: 800px){
+
+    :root {
+        --headerwidth: 610px;
+        --headerLineWidth: 601px;
+        --width: 600px;
+    }
+    .projectDescription{
+        max-width: 640px;
+        
+    }
+    .aboutSection{
+        min-height: 420px;
+    }
+}
+
+@media(max-width: 600px){
+
+    :root {
+        --headerwidth: 510px;
+        --headerLineWidth: 501px;
+        --width: 500px;
+    }
+    .projectDescription{
+        max-width: 480px;
+        
+    }
 }
 
 
-@media(max-width:480px){
+@media(max-width:500px){
 
     * {
         -webkit-tap-highlight-color: transparent;
@@ -518,12 +631,13 @@ p{
     }
 
     .hero{
-        margin: 40px 0 0 0;
+        margin: 40px 0 0 5px;
         height: 350px;
         width: var(--width);
     }
     .hero h1{
         font-size: 2.168rem;
+        
     }
     
     .hero h2{
@@ -755,7 +869,52 @@ p{
     line-height: 1.2rem;
 }
 
+.emailSection{
+    height: 640px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.emailSection h2{
+   margin-left: 4px;
+}
+
+.profileImage{
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.input{
+    height: 50px;
+    width: 349px;
+    margin-left: 5px;
+    font-size: 0.8rem;
+    padding-left: 5px;
+}
+
+.emailTextArea{
+    width: 349px;
+    height: 300px;
+    margin-left: 5px;
+    font-size: 0.8rem;
+   
+}
+
+.submitBtn{
+    height: 50px;
+    width: 349px;
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+
+.emptySpace{
+    height: 0px;
+}
 .objectIni{
     margin: 0;
 }
@@ -779,3 +938,41 @@ p{
 
 }
 
+@media(max-width:360px){
+    :root {
+        --headerwidth: 330px;
+        --headerLineWidth: 321px;
+        --width: 320px;
+    }
+
+    .projectDescription{
+        font-size: 0.8rem;
+        margin: 5px 0 5px 10px;
+        line-height: 1.2rem;
+        max-width: 300px;
+        
+    }
+
+    .emailSection{
+        height: 690px;
+        width: 100%;
+
+    }
+
+    .input{
+        height: 50px;
+        width: 320px;
+    }
+    
+    .emailTextArea{
+        width: 320px;
+        height: 320px;
+       
+    }
+    
+    .submitBtn{
+        height: 50px;
+        width: 320px;
+    }
+
+}
