@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* scrollbar-width: none; */
+    scrollbar-width: none;
 }
 body{
     background-color: rgb(23 23 23);
@@ -469,7 +469,7 @@ p{
     flex-direction: column;
     gap: 20px;
 }
-.emailSection h2{
+.emailSection h3{
    margin-left: 4px;
 }
 
