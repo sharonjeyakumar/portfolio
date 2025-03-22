@@ -9,16 +9,6 @@ const experienceNav = document.querySelector('.experienceNav');
 const educationNav = document.querySelector('.educationNav');
 const aboutNav = document.querySelector('.aboutNav');
 
-
-
-
-
-
-
-
-
-
-
 window.addEventListener('scroll', ()=>{
     // console.log(scrollY);
 
