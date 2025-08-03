@@ -10,7 +10,6 @@ const educationNav = document.querySelector('.educationNav');
 const aboutNav = document.querySelector('.aboutNav');
 
 window.addEventListener('scroll', ()=>{
-    // console.log(scrollY);
 
     if(window.innerWidth >= 500){
         if(window.scrollY<260){
@@ -21,15 +20,15 @@ window.addEventListener('scroll', ()=>{
             directory.textContent = 'projects';
         }
     
-        if(window.scrollY>788){
+        if(window.scrollY>810){
             directory.textContent = 'experience';
         }
         
-        if(window.scrollY>1095){
+        if(window.scrollY>1250){
             directory.textContent = 'education';
         } 
     
-        if(window.scrollY>1478){
+        if(window.scrollY>1620){
             directory.textContent = 'about';
         }
     } else {
@@ -45,11 +44,11 @@ window.addEventListener('scroll', ()=>{
             directory.textContent = 'experience';
         }
         
-        if(window.scrollY>1055){
+        if(window.scrollY>1235){
             directory.textContent = 'education';
         } 
     
-        if(window.scrollY>1385){
+        if(window.scrollY>1560){
             directory.textContent = 'about';
         }
     }
@@ -75,17 +74,12 @@ projectNav.addEventListener('click', ()=>{
     }
     
 })
-// experienceNav.addEventListener('click', ()=>{
-//     window.scrollTo(0,820)
-// })
-// educationNav.addEventListener('click', ()=>{
-//     window.scrollTo(0,820)
-// })
+
 aboutNav.addEventListener('click', ()=>{
     if(window.innerWidth >500){
-        window.scrollTo(0,1510);
+        window.scrollTo(0,1640);
     } else {
-        window.scrollTo(0,1410);
+        window.scrollTo(0,1585);
     }
 })
 
@@ -98,8 +92,6 @@ window.addEventListener('scroll', ()=>{
     }
 })
 
-
-
     projectHolder.forEach(item => {
         item.addEventListener('mouseover', ()=>{
             item.style.paddingLeft = '10px';
@@ -111,3 +103,38 @@ window.addEventListener('scroll', ()=>{
             item.style.paddingLeft = '0';
         })
     });
+
+// Get all hover targets
+const hoverTargets = document.querySelectorAll('.hoverTarget');
+const revealDiv = document.getElementById('floatingProjectReveal');
+const hoverImage = revealDiv.querySelector('.hover-image');
+
+// Add event listeners to each hover target
+hoverTargets.forEach(target => {
+  target.addEventListener('mousemove', (e) => {
+    // Get the image URL from data attribute
+    const imageUrl = target.getAttribute('data-hover-image');
+    
+    // Update the floating div's image
+    hoverImage.src = imageUrl;
+    
+    // Get current scroll position
+    const scrollX = window.scrollX || window.pageXOffset;
+    const scrollY = window.scrollY || window.pageYOffset;
+    
+    // Position the div centered at cursor, accounting for scroll
+    const x = e.clientX + scrollX - (revealDiv.offsetWidth / 2);
+    const y = e.clientY + scrollY - (revealDiv.offsetHeight / 2) + 20;
+    
+    revealDiv.style.left = `${x}px`;
+    revealDiv.style.top = `${y}px`;
+    
+    // Show the div
+    revealDiv.classList.add('visible');
+  });
+
+  target.addEventListener('mouseleave', () => {
+    // Hide the div when mouse leaves
+    revealDiv.classList.remove('visible');
+  });
+});
