@@ -623,6 +623,9 @@ p{
     .aboutSection{
         min-height: 420px;
     }
+    html, body {
+     overflow-x: hidden;
+    }
 }
 
 @media(max-width: 600px){
@@ -634,7 +637,6 @@ p{
     }
     .projectDescription{
         max-width: 480px;
-        
     }
 }
 
@@ -661,6 +663,10 @@ p{
         --headerLineWidth: 351px;
         --width: 349px;
     }
+    html, body {
+     overflow-x: hidden;
+    }
+    
 
     .navItem{
         font-size: 0.8rem;
@@ -990,6 +996,7 @@ p{
         --width: 320px;
     }
 
+   
     .projectDescription{
         font-size: 0.8rem;
         margin: 5px 0 5px 10px;

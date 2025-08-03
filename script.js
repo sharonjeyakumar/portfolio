@@ -131,26 +131,28 @@ const revealDiv = document.getElementById('floatingProjectReveal');
 const hoverImage = revealDiv.querySelector('.hover-image');
 
 hoverTargets.forEach(target => {
-  target.addEventListener('mousemove', (e) => {
-    const imageUrl = target.getAttribute('data-hover-image');
-    
-    hoverImage.src = imageUrl;
-    
-    const scrollX = window.scrollX || window.pageXOffset;
-    const scrollY = window.scrollY || window.pageYOffset;
-    
-    const x = e.clientX + scrollX - (revealDiv.offsetWidth / 2);
-    const y = e.clientY + scrollY - (revealDiv.offsetHeight / 2) + 20;
-    
-    revealDiv.style.left = `${x}px`;
-    revealDiv.style.top = `${y}px`;
-    
-    
-    revealDiv.classList.add('visible');
-  });
-
-  target.addEventListener('mouseleave', () => {
-    revealDiv.classList.remove('visible');
-  });
+    if(window.innerWidth>500){
+        target.addEventListener('mousemove', (e) => {
+          const imageUrl = target.getAttribute('data-hover-image');
+          
+          hoverImage.src = imageUrl;
+          
+          const scrollX = window.scrollX || window.pageXOffset;
+          const scrollY = window.scrollY || window.pageYOffset;
+          
+          const x = e.clientX + scrollX - (revealDiv.offsetWidth / 2);
+          const y = e.clientY + scrollY - (revealDiv.offsetHeight / 2) + 20;
+          
+          revealDiv.style.left = `${x}px`;
+          revealDiv.style.top = `${y}px`;
+          
+          
+          revealDiv.classList.add('visible');
+        });
+      
+        target.addEventListener('mouseleave', () => {
+          revealDiv.classList.remove('visible');
+        });
+    }
 });
 
